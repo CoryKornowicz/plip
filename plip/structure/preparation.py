@@ -1513,6 +1513,7 @@ if __name__ == '__main__':
     test = "/Users/corykornowicz/Google Drive/Cui Research/protein_0.pdb"
     
     pars = PDBComplex()
-    pars.load_pdb("/Users/corykornowicz/Google Drive/Cui Research/BAK_D112_complex_protonated.pdb", as_string=False)
+    pars.load_pdb(control, as_string=False)
     pars.analyze()
-    print(pars)
+
+    # print(pars.ligands)

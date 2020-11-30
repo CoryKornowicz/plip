@@ -48,3 +48,5 @@ target/
 # Other
 *~
 .nfs*
+.DS_Store
+*.json

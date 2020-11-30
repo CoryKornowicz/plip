@@ -279,6 +279,8 @@ class LigandFinder:
                 peptide_ligands = [self.getpeptides(chain) for chain in config.PEPTIDES]
             elif config.INTRA is not None:
                 peptide_ligands = [self.getpeptides(config.INTRA), ]
+            else:
+                peptide_ligands = []
 
             ligands = [p for p in peptide_ligands if p is not None]
             self.covalent, self.lignames_kept, self.lignames_all = [], [], set()
@@ -1503,3 +1505,14 @@ class PDBComplex:
     @output_path.setter
     def output_path(self, path):
         self._output_path = tilde_expansion(path)
+
+
+if __name__ == '__main__':
+    
+    control = "/Users/corykornowicz/Google Drive/Cui Research/BAK_D112_complex_protonated.pdb"
+    test = "/Users/corykornowicz/Google Drive/Cui Research/protein_0.pdb"
+    
+    pars = PDBComplex()
+    pars.load_pdb("/Users/corykornowicz/Google Drive/Cui Research/BAK_D112_complex_protonated.pdb", as_string=False)
+    pars.analyze()
+    print(pars)

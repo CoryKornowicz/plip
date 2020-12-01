@@ -1515,5 +1515,6 @@ if __name__ == '__main__':
     pars = PDBComplex()
     pars.load_pdb(control, as_string=False)
     pars.analyze()
+    
 
     # print(pars.ligands)

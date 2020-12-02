@@ -1505,16 +1505,3 @@ class PDBComplex:
     @output_path.setter
     def output_path(self, path):
         self._output_path = tilde_expansion(path)
-
-
-if __name__ == '__main__':
-    
-    control = "/Users/corykornowicz/Google Drive/Cui Research/BAK_D112_complex_protonated.pdb"
-    test = "/Users/corykornowicz/Google Drive/Cui Research/protein_0.pdb"
-    
-    pars = PDBComplex()
-    pars.load_pdb(control, as_string=False)
-    pars.analyze()
-    
-
-    # print(pars.ligands)
